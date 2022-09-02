@@ -1,0 +1,102 @@
+/* font-family: 'Aboreto', cursive;
+font-family: 'Handlee', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Permanent Marker', cursive; */
+
+body{
+    box-sizing: border-box;
+    width: 650px;
+    margin: 0 auto;
+}
+
+#left {
+    position: absolute;
+    width: 50px;
+    height: 750px;
+    border-right: 3px double rgba(255, 0, 0, 0.356);
+    background-color:rgba(255, 255, 255, 0)
+}
+
+#notepad {
+    height: 800px;
+    background: rgb(238, 238, 174);
+    box-shadow: 5px 5px 5px rgb(161, 161, 161);
+}
+
+#notepad header {
+    height: 50px;
+    background: rgb(32, 32, 32);
+    box-shadow: 0 2px 5px rgb(112, 112, 112);
+}
+
+#page ul {
+    padding-left: 0;
+}
+
+#page {
+    height: 750px;
+    margin-top: 0;
+    overflow: auto;
+}
+
+#top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100px;
+    margin-left: 0px;
+    padding-left: 10px;
+    border-bottom: 1px solid rgba(0, 0, 255, 0.418);
+
+}
+
+#top form {
+    padding-top: 10px;
+}
+
+.completed{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.logout {
+    padding-top: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    font-family: 'Aboreto', cursive;
+}
+
+form {
+    padding-left: 50px;
+}
+
+h1{
+    padding-top: 10px;
+    color: silver;
+    text-align: center;
+    font-family: 'Aboreto', cursive;
+}
+
+h2{
+    margin: 0;
+    padding-top: 10px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 60px;
+    list-style-type: none;
+    border-bottom: 1px solid rgba(0, 0, 255, 0.418);
+    font-family: 'Handlee', cursive;
+    font-size: 20px;
+
+}
+
+ul {
+    margin: 0;
+}
+
