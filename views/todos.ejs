@@ -30,8 +30,8 @@
                 <!-- <h2><%= user.userName %> has <%= left %> things left to do.</h2> -->
 
                 <form action="/todos/createTodo" method='POST'>
-                    <input type="text" placeholder="Enter To-do Item" name='todoItem'>
-                    <input type="submit">
+                    <input type="text" placeholder="Enter To-do Item" name='todoItem' class='text-field'>
+                    <input type="submit" class="button">
                 </form>
 
                 <a class="logout" href="/logout">Logout</a>
@@ -39,41 +39,35 @@
             </section>
           
                 <h2>Private</h2>
+          
                 <ul>
                     <% todos.forEach( el => { %>
                         <li class='todoItem' data-id='<%=el._id%>'>
-                            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+<!--                             <span class='<%= el.isPublic === true ? 'pub' : 'priv'%>'>Public</span> -->
+<!--                             <span class="priv">Private</span> -->
+                            <span class='<%= el.completed === true ? 'completed' : 'not'%> <%= el.setPriority === true ? 'priority' : 'notPriority'%>'><%= el.todo %></span>
+                          <section class="task-options" data-id='<%=el._id%>'>
+                            <span class='button <%= el.isPublic === true ? 'clicked' : ''%> <%= el.isPublic === true ? 'pub' : 'priv'%>'>Public</span>
+                            
+                            <span class="material-symbols-outlined <%= el.setPriority === true ? 'priority' : 'notPriority'%>">flag</span>
                             <span class="material-symbols-outlined del">delete</span>
-<!--                           <fieldset>
-                            <legend>Set public:</legend>
-
-                            <div>
-                            <input type="radio" id="huey" name="drone" value="huey"
-                                        checked>
-                            <label for="huey">Public</label>
-                            </div>
-
-                            <div>
-                              <input type="radio" id="dewey" name="drone" value="dewey">
-                              <label for="dewey">Private</label>
-                            </div>
-                        </fieldset> -->
-                            <!-- <span class='del'> Delete </span> -->
+                          </section>
                         </li>
                     <% }) %>    
                 </ul>
                       
                 <h2>Public</h2>
+                      
                 <ul>
                   <% public.forEach( el => { %>
                     <li class='todoItem' data-id='<%=el._id%>'>
 <!--                 <span class='<%= el.isPublic === true ? 'isPublic' : 'not'%>'><%= el.todo %></span> -->
                     <% if(el.isPublic === true) { %>
-                      <span><%= el.todo %></span>
+                      <span class='<%= el.completed === true ? 'completed' : 'not'%> <%= el.setPriority === true ? 'priority' : 'notPriority'%>'><%= el.todo %></span>
                     <% } %>
                     <span class="material-symbols-outlined del">delete</span>
                       <!-- <span class='del'> Delete </span> -->
-                  </li>
+                    </li>
                   <% }) %> 
                 </ul>
                     

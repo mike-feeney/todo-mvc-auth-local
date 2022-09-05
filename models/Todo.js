@@ -16,6 +16,10 @@ const TodoSchema = new mongoose.Schema({
   isPublic: {
     type: Boolean,
     required: true
+  },
+  setPriority: {
+    type: Boolean,
+    required: true
   }
 })
 

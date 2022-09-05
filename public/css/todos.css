@@ -40,6 +40,12 @@ body{
     overflow: auto;
 }
 
+#page h2 {
+  font-family: 'Aboreto', cursive;
+  padding-left: 60px;
+  border-bottom: 1px solid rgba(0, 0, 255, 0.418);
+}
+
 #top {
     display: flex;
     flex-direction: row;
@@ -53,6 +59,19 @@ body{
 
 #top form {
     padding-top: 10px;
+}
+
+.button {
+  font-family: 'Aboreto', cursive;
+  font-weight: bold;
+  background: lightgray;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 2px;
+}
+
+.clicked {
+  background: lightcoral;
 }
 
 .completed{
@@ -99,4 +118,12 @@ li {
 ul {
     margin: 0;
 }
-
+.task-options{
+  display: flex;
+}
+.priority {
+  color: red;
+}
+.notPriority{
+  color: black;
+}

@@ -84,13 +84,3 @@ span:hover{
     justify-content: center;
     gap: 0.5rem;
 }
-
-/* .home-button span{
-    font-size: 0.8rem;
-    background: rgba(0,0,0,0.5);
-    color: white;
-}
-.home-button span:hover{
-    background: white;
-    color: rgba(0,0,0,0.5);
-} */
