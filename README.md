@@ -1,22 +1,12 @@
 # Introduction
 
-A Simple ToDo App is built using the MVC Architecture, we have also implemented "authorization" so folx can sign up, customize & personalize the app 
-
----
-
-> Be sure to add that lovely star 😀 and fork it for your own copy
+Todo task tracker built using the MVC Architecture. Complete with user authorization and the ability to share individual tasks publicly with other group members, and set priority levels for each task.
 
 ---
 
 # Objectives
 
-- It's a beginner level app created to understand how MVC concept and logins are added
-
----
-
-# Who is this for? 
-
-- It's for beginners & intermediates with little more experience, to help understand the various aspects of building a node app with some complex features
+- Engage in a team work flow within an MVC architecture.
 
 ---
 
@@ -38,7 +28,27 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
   - PORT: 2121 (can be any port example: 3000) 
   - DB_STRING: `your database URI` 
  ---
- 
- Have fun testing and improving it! 😎
+
+## Optimizations
+
+- [ ] Feature: Ability to sort tasks by priority.
+- [ ] Style: Align the login and signup CSS to match the Notepad design of task list.
+- [ ] Feature: Date of task creation shown in Notepad margin.
+
+## Lessons Learned:
+
+- There is never any 'one way' to accomplish a task.
+- Recognizing the benefits of teamwork while talking through and solving code errors.
+
+## Group Members: 
+  - @Chrix
+  - @DGLNYC
+  - @Kammie
+  - @Dril
+  - @PrincessOfKhaos216
+  - @Kammie
+  - @Longhumans
+
+
 
 
