@@ -63,7 +63,7 @@
                     <li class='todoItem' data-id='<%=el._id%>'>
 
                     <% if(el.isPublic === true) { %>
-                      <span class='<%= el.completed === true ? 'completed' : 'not'%> <%= el.setPriority === true ? 'priority' : 'notPriority'%> <%= el.setPriority === true ? 'red' : ''%>'><%= el.todo %></span>
+                      <span class='<%= el.completed === true ? 'completed' : 'not'%> <%= el.setPriority === true ? 'red' : ''%>'><%= el.todo %></span>
                     <% } %>
                     <span class="material-symbols-outlined del">delete</span>
                     </li>
