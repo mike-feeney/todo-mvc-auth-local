@@ -88,31 +88,41 @@ body{
     font-family: 'Aboreto', cursive;
 }
 
+.text-field {
+  width: 300px;
+  font-family: 'Handlee', cursive;
+  border-radius: 8px;
+}
+
 form {
     padding-left: 50px;
 }
 
 h1{
-    padding-top: 10px;
+    font-size: 20px;
+    padding-top: 12px;
     color: silver;
     text-align: center;
     font-family: 'Aboreto', cursive;
 }
 
 h2{
+    font-weight: 600;
     margin: 0;
-    padding-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 li {
     display: flex;
     justify-content: space-between;
+    height: 26px;
     padding-left: 60px;
+    padding-bottom: 0;
     list-style-type: none;
     border-bottom: 1px solid rgba(0, 0, 255, 0.418);
     font-family: 'Handlee', cursive;
     font-size: 20px;
-
 }
 
 ul {
@@ -121,9 +131,6 @@ ul {
 .task-options{
   display: flex;
 }
-.priority {
+.red {
   color: red;
-}
-.notPriority{
-  color: black;
 }

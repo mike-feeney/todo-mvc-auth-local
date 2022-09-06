@@ -26,7 +26,6 @@
         
         <section id="page">
             <section id="top">
-
                 <!-- <h2><%= user.userName %> has <%= left %> things left to do.</h2> -->
 
                 <form action="/todos/createTodo" method='POST'>
@@ -45,15 +44,16 @@
                         <li class='todoItem' data-id='<%=el._id%>'>
 <!--                             <span class='<%= el.isPublic === true ? 'pub' : 'priv'%>'>Public</span> -->
 <!--                             <span class="priv">Private</span> -->
-                            <span class='<%= el.completed === true ? 'completed' : 'not'%> <%= el.setPriority === true ? 'priority' : 'notPriority'%>'><%= el.todo %></span>
+                            <span class='<%= el.completed === true ? 'completed' : 'not'%> <%= el.setPriority === true ? 'red' : ''%>'><%= el.todo %></span>
                           <section class="task-options" data-id='<%=el._id%>'>
                             <span class='button <%= el.isPublic === true ? 'clicked' : ''%> <%= el.isPublic === true ? 'pub' : 'priv'%>'>Public</span>
                             
-                            <span class="material-symbols-outlined <%= el.setPriority === true ? 'priority' : 'notPriority'%>">flag</span>
+                            <span class="material-symbols-outlined <%= el.setPriority === true ? 'priority red' : 'notPriority'%>">flag</span>
                             <span class="material-symbols-outlined del">delete</span>
                           </section>
                         </li>
-                    <% }) %>    
+                    <% }) %> 
+                        <li></li>
                 </ul>
                       
                 <h2>Public</h2>
@@ -61,16 +61,21 @@
                 <ul>
                   <% public.forEach( el => { %>
                     <li class='todoItem' data-id='<%=el._id%>'>
-<!--                 <span class='<%= el.isPublic === true ? 'isPublic' : 'not'%>'><%= el.todo %></span> -->
+
                     <% if(el.isPublic === true) { %>
-                      <span class='<%= el.completed === true ? 'completed' : 'not'%> <%= el.setPriority === true ? 'priority' : 'notPriority'%>'><%= el.todo %></span>
+                      <span class='<%= el.completed === true ? 'completed' : 'not'%> <%= el.setPriority === true ? 'priority' : 'notPriority'%> <%= el.setPriority === true ? 'red' : ''%>'><%= el.todo %></span>
                     <% } %>
                     <span class="material-symbols-outlined del">delete</span>
-                      <!-- <span class='del'> Delete </span> -->
                     </li>
                   <% }) %> 
+                    <!-- Add empty li elements to fill page -->
+                    <% if(count < 20) { %>
+                      <% for (let i = 1; i <= 20 - count; i++) { %>
+                        <li></li> 
+                      <% } %>
+                    <% } %>
                 </ul>
-                    
+                   
             </section>
                     
           <section>

@@ -6,9 +6,11 @@ module.exports = {
     try {
       const todoItems = await Todo.find({ userId: req.user.id })
       const itemsLeft = await Todo.countDocuments({ userId: req.user.id, completed: false })
+      const privateTodosCount = await Todo.countDocuments({ userId: req.user.id})
+      const publicTodosCount = await Todo.countDocuments({ isPublic: true})
       // Gets all todos marked as complete
       const publicItems = await Todo.find({ isPublic: true })
-      res.render('todos.ejs', { todos: todoItems, left: itemsLeft, user: req.user, public: publicItems })
+      res.render('todos.ejs', { todos: todoItems, left: itemsLeft, user: req.user, public: publicItems, count: privateTodosCount + publicTodosCount})
     } catch (err) {
       console.log(err)
     }
